@@ -1,3 +1,4 @@
+"use client";
 import Script from "next/script";
 import {createContext, useContext, useEffect, useMemo, useState} from "react";
 import type {ITelegramUser, IWebApp} from "../types";

@@ -1,3 +1,4 @@
+"use client";
 import { TelegramProvider, useTelegram } from "@/lib/TelegramProvider";
 
 const WebApp = () => {
