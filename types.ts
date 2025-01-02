@@ -6,6 +6,7 @@ export interface ITelegramUser {
   language_code: string;
 }
 
+// https://core.telegram.org/bots/webapps#initializing-mini-apps
 export interface IWebApp {
   initData: string;
   initDataUnsafe: {
@@ -26,12 +27,19 @@ export interface IWebApp {
     bg_color: string;
     text_color: string;
   };
+  isActive: boolean;
   isExpanded: boolean;
   viewportHeight: number;
   viewportStableHeight: number;
   isClosingConfirmationEnabled: boolean;
   headerColor: string;
   backgroundColor: string;
+  bottomBarColor: string;
+  isVerticalSwipesEnabled: boolean;
+  isFullscreen: boolean;
+  isOrientationLocked: boolean;
+  safeAreaInset: any;
+  contentSafeAreaInset: any;
   BackButton: {
     isVisible: boolean;
   };
@@ -44,4 +52,24 @@ export interface IWebApp {
     isActive: boolean;
   };
   HapticFeedback: any;
+  Accelerometer: any;
+  DeviceOrientation: any;
+  Gyroscope: any;
+  LocationManager: any;
+  isVersionAtLeast: (version: string) => void;
+  setHeaderColor: (color: string) => void;
+  setBackgroundColor: (color: string) => void;
+  setBottomBarColor: (color: string) => void;
+  enableClosingConfirmation: () => void;
+  disableClosingConfirmation: () => void;
+  enableVerticalSwipes: () => void;
+  disableVerticalSwipes: () => void;
+  requestFullscreen: () => void;
+  exitFullscreen: () => void;
+  lockOrientation: () => void;
+  unlockOrientation: () => void;
+  addToHomeScreen: () => void;
+  sendData: (data: string) => void;
+  expand: () => void;
+  close: () => void;
 }
